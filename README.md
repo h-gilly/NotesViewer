@@ -1,54 +1,60 @@
-## Notes Viewer API
+# Notes Viewer API
 
 A simple REST-style API built in PHP for viewing notes stored in a local JSON file.
 This project demonstrates basic backend routing, JSON handling, and clean API responses without using any frameworks.
 
-# Features
+## Features
 
-•  Returns all notes
-•  Returns a single note by ID
-•  Clean JSON responses
-•  Lightweight and dependency-free
-•  Beginner-friendly structure
+- Returns all notes
+- Returns a single note by ID
+- Clean JSON responses
+- Lightweight and dependency‑free
+- Beginner‑friendly structure
 
-# Project Structure
-
-,,,
-theNotesViewer/
-├── index.php — Main API router
-└── notes.json — Local notes data
-,,,
-
-# Getting Started
-
-1. Clone the repository
-
-,,,
-git clone <your-repo-url>
-cd theNotesViewer
-,,,
-
-1. Start the local server
+## Project Structure
 
 ```
+notesViewer/
+├── index.php — Main API router
+└── notes.json — Local notes data
+```
+
+## Getting Started
+
+### Clone the repository
+
+```bash
+git clone <your-repo-url>
+cd notesViewer
+```
+
+### Start the local server
+
+```bash
 php -S localhost:8001
 ```
 
+Then open: `http://localhost:8001`
+
 ## API Endpoints
 
-# Get all notes
-
-`GET/notes`
-
-# Get a note by ID
-
-`GET/notes/{id}`
-Example:
-`GET/notes/1`
-
-## Example Response
+### Get all notes
 
 ```
+GET /notes
+```
+
+### Get a note by ID
+
+```
+GET /notes/{id}
+```
+
+Example: `GET /notes/1`
+
+### Example Response
+
+```json
 {
   "id": 1,
   "title": "First Note",
@@ -56,7 +62,7 @@ Example:
 }
 ```
 
-# Purpose of This Project
+## Purpose of This Project
 
 This project was created to practice:
 
@@ -64,16 +70,17 @@ This project was created to practice:
 - Routing and URL pattern matching
 - JSON file storage
 - Returning structured API responses
-It serves as a simple, clean example of how to build a small API without any frameworks.
 
-# Possible Future Improvements
+It serves as a clean, simple example of how to build a small API without any frameworks.
+
+## Possible Future Improvements
 
 - Add search (`/notes?search=...`)
-- Add note creation (POST)
+- Add note creation (`POST`)
 - Add editing and deleting notes
 - Add timestamps or categories
 - Add a small frontend viewer
 
-# License
+## License
 
 MIT License — free to use or modify.
